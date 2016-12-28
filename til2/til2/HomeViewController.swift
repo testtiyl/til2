@@ -13,6 +13,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let goals:[Goal] = []
+    private let cellIdentifier = "cartTableViewCell"
+
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -22,6 +24,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
         
     }
     
@@ -32,15 +37,30 @@ class HomeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
+    }
 }
 
-
-extension HomeViewController : UITableViewDelegate {
-
-   }
+extension HomeViewController : UITableViewDelegate,UITableViewDataSource {
 
 
-extension HomeViewController: UITableViewDataSource {
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return self.goals.count
+    }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 41 + 70
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        var cell : HomeTableViewCell =  tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath:indexPath) as? HomeTableViewCell
+        cell.goalTitleLbl = "goal 1"
+        cell.goalImageView.image =
+        
+        
+        
+    }
 }
+

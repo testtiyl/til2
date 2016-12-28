@@ -130,6 +130,13 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		0C0869A71E1441EE00AEE68C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		0CFD77571E0D3FBF00443D6F = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +161,7 @@
 		0CFD77621E0D3FC000443D6F /* til2 */ = {
 			isa = PBXGroup;
 			children = (
+				0C0869A71E1441EE00AEE68C /* Resources */,
 				0C08699D1E13D4C100AEE68C /* Model */,
 				0C0869961E118A8600AEE68C /* Custom Views */,
 				0C0869941E118A3B00AEE68C /* Controllers */,
