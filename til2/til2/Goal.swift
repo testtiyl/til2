@@ -8,7 +8,12 @@
 
 import UIKit
 
-class Goal: NSObject {
+struct Goal {
 
+    var imageURl : String
+    var title : String
+    var author: String
+    var todo: Int
+    var done: Int
     
 }

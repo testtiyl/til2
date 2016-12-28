@@ -37,8 +37,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController : UITableViewDelegate {
 
-    
-}
+   }
 
 
 extension HomeViewController: UITableViewDataSource {
