@@ -7,27 +7,30 @@
 //
 
 import UIKit
+import SwiftyJSON
+
 
 struct Goal {
 
     var imageURl : String
+    var user_imgURL  :String
     var title : String
     var author: String
     var todo: Int
     var done: Int
-    
+
+}
+
+extension Goal {
+
     init(json : JSON) {
         
-        validity = json["coupon_validity"].stringValue
-        isApplicable = json["is_applicable"].boolValue
-        method = json["coupon_method"].stringValue
-        value = json["coupon_value"].stringValue
-        code = json["coupon_code"].stringValue
-        description = json["coupon_description"].description
-        validTill = json["valid_till"].stringValue
-        shortDescription = json["coupon_short_description"].stringValue
-        longDescription = json["coupon_long_description"].stringValue
-        
+        imageURl = json[""].stringValue
+        user_imgURL = json[""]
+        title = json[""]
+        author = json[""]
+        todo = json[""]
+        done = json[""]
     }
 }
 
